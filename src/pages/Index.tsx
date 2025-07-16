@@ -1,6 +1,7 @@
-import React from "react";
+
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { GraduationCap, BookOpen, Users, Trophy } from "lucide-react";
+import { GraduationCap, BookOpen, Users, Trophy, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,8 +10,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { AuthContext } from "@/App";
 
 const Index = () => {
+  const { logout } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logout();
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100">
       {/* Header */}
@@ -21,6 +29,15 @@ const Index = () => {
               <BookOpen className="w-8 h-8 text-blue-600" />
               <h1 className="text-2xl font-bold text-gray-900">QuizPlatform</h1>
             </div>
+            <Button 
+              onClick={handleLogout}
+              variant="outline"
+              size="sm"
+              className="flex items-center gap-2"
+            >
+              <LogOut className="w-4 h-4" />
+              Logout
+            </Button>
           </div>
         </div>
       </header>

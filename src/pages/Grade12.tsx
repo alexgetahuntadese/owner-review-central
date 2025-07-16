@@ -1,12 +1,11 @@
 
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Calculator, Atom, Leaf, Globe, History, Languages, Briefcase, Flag, Computer, Heart, Wrench, Wheat } from 'lucide-react';
 
 const Grade12 = () => {
-  const navigate = useNavigate();
 
   const subjects = [
     {
@@ -111,14 +110,15 @@ const Grade12 = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 p-4">
       <div className="max-w-6xl mx-auto">
         <div className="mb-6">
-          <Button 
-            onClick={() => navigate('/')}
-            variant="outline"
-            className="mb-4"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Button>
+          <Link to="/">
+            <Button 
+              variant="outline"
+              className="mb-4"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
           
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">Grade 12 Subjects</h1>
@@ -130,39 +130,35 @@ const Grade12 = () => {
           {subjects.map((subject) => {
             const IconComponent = subject.icon;
             return (
-              <Card 
+              <Link 
                 key={subject.id}
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-2 border-purple-200"
-                onClick={() => navigate(`/grade-12/${subject.id}`)}
+                to={`/grade-12/${subject.id}`}
+                className="block"
               >
-                <CardHeader className="text-center pb-4">
-                  <div className={`w-16 h-16 ${subject.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform shadow-lg`}>
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <CardTitle className="text-lg font-bold">{subject.name}</CardTitle>
-                  <CardDescription className="text-sm">
-                    {subject.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-3">
-                  <div className="text-center">
-                    <div className="bg-gray-100 rounded-full px-3 py-1">
-                      <span className="text-xs font-medium text-gray-700">{subject.questions} Questions</span>
+                <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-2 border-purple-200">
+                  <CardHeader className="text-center pb-4">
+                    <div className={`w-16 h-16 ${subject.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform shadow-lg`}>
+                      <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                  </div>
+                    <CardTitle className="text-lg font-bold">{subject.name}</CardTitle>
+                    <CardDescription className="text-sm">
+                      {subject.description}
+                    </CardDescription>
+                  </CardHeader>
                   
-                  <Button 
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-2 rounded-lg transition-all duration-300"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      navigate(`/grade-12/${subject.id}`);
-                    }}
-                  >
-                    Start Learning
-                  </Button>
-                </CardContent>
-              </Card>
+                  <CardContent className="space-y-3">
+                    <div className="text-center">
+                      <div className="bg-gray-100 rounded-full px-3 py-1">
+                        <span className="text-xs font-medium text-gray-700">{subject.questions} Questions</span>
+                      </div>
+                    </div>
+                    
+                    <Button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium py-2 rounded-lg transition-all duration-300">
+                      Start Learning
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
             );
           })}
         </div>

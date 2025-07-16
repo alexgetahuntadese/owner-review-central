@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -21,6 +22,8 @@ import {
 } from "@/components/ui/card";
 import { Link, useNavigate } from "react-router-dom";
 import { BookOpen } from "lucide-react";
+import { AuthContext } from "@/App";
+import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
   email: z.string().email({
@@ -39,6 +42,8 @@ const formSchema = z.object({
 
 const SignUp = () => {
   const navigate = useNavigate();
+  const { register } = useContext(AuthContext);
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,19 +53,24 @@ const SignUp = () => {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    try {
-      // Simple validation
-      if (values.email && values.password && values.password.length >= 8) {
-        // Simulate successful registration
-        navigate("/");
-      } else {
-        alert("Please enter valid details (password min 8 characters)");
-      }
-    } catch (error) {
-      alert("Registration failed. Please try again.");
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log("Signup values:", values);
+    const success = register(values.email, values.password);
+    
+    if (success) {
+      toast({
+        title: "Registration Successful",
+        description: "Welcome to QuizPlatform! You're now logged in.",
+      });
+      navigate("/");
+    } else {
+      toast({
+        title: "Registration Failed",
+        description: "Please check your information and try again.",
+        variant: "destructive",
+      });
     }
-  };
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 flex items-center justify-center p-4">
