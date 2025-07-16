@@ -1,45 +1,29 @@
-import React, { useContext, useState } from "react";
-import { Navigate, Link } from "react-router-dom";
-import { AuthContext } from "../App";
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "@/hooks/use-toast";
 
 const Login = () => {
-  const { isAuthenticated, login } = useContext(AuthContext);
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
-  if (isAuthenticated) {
-    return <Navigate to="/" replace />;
-  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
-      const success = login(email, password);
-      if (success) {
-        toast({
-          title: "Success",
-          description: "Logged in successfully!",
-        });
+      // Simple validation - just check if fields are filled
+      if (email && password && password.length >= 6) {
+        // Simulate successful login
+        navigate("/");
       } else {
-        toast({
-          title: "Error",
-          description: "Invalid email or password. Password must be at least 6 characters.",
-          variant: "destructive",
-        });
+        alert("Please enter valid email and password (min 6 characters)");
       }
     } catch (error) {
-      toast({
-        title: "Error",
-        description: "Something went wrong. Please try again.",
-        variant: "destructive",
-      });
+      alert("Login failed. Please try again.");
     } finally {
       setIsLoading(false);
     }
