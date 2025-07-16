@@ -852,41 +852,280 @@ export const grade11MathematicsChapters: Chapter[] = [
     name: 'Determinants and their Properties',
     description: 'Calculating determinants and understanding their properties',
     questions: [
-      // Easy Questions (10)
-      { id: 'math-11-4-1', question: 'What is the determinant of [[3, 2], [1, 4]]?', options: ['10', '12', '14', '6'], correct: '10', explanation: 'For 2×2 matrix [[a,b],[c,d]], determinant = ad - bc = 3×4 - 2×1 = 12 - 2 = 10.', difficulty: 'easy', topic: '2×2 Determinants' },
-      { id: 'math-11-4-2', question: 'What is the determinant of [[1, 2, 3], [0, 4, 5], [0, 0, 6]]?', options: ['24', '30', '120', '6'], correct: '24', explanation: 'For upper triangular matrix, determinant is the product of diagonal elements: 1×4×6 = 24.', difficulty: 'easy', topic: '3×3 Determinants' },
-      { id: 'math-11-4-3', question: 'If two rows of a matrix are identical, what is its determinant?', options: ['0', '1', '-1', 'Cannot be determined'], correct: '0', explanation: 'If a matrix has two identical rows (or columns), its determinant is always 0.', difficulty: 'easy', topic: 'Determinant Properties' },
-      { id: 'math-11-4-4', question: 'What is the determinant of [[5, 0], [0, 3]]?', options: ['15', '8', '5', '3'], correct: '15', explanation: 'For diagonal matrix, determinant = product of diagonal elements = 5×3 = 15.', difficulty: 'easy', topic: '2×2 Determinants' },
-      { id: 'math-11-4-5', question: 'What is the determinant of the identity matrix I₂?', options: ['1', '0', '2', '4'], correct: '1', explanation: 'The determinant of any identity matrix is 1.', difficulty: 'easy', topic: 'Special Determinants' },
-      { id: 'math-11-4-6', question: 'What is the determinant of [[1, 0], [0, 1]]?', options: ['1', '0', '2', '-1'], correct: '1', explanation: 'det([[1, 0], [0, 1]]) = 1×1 - 0×0 = 1.', difficulty: 'easy', topic: '2×2 Determinants' },
-      { id: 'math-11-4-7', question: 'If A is a 2×2 matrix with det(A) = 0, what can we conclude?', options: ['A is singular', 'A is invertible', 'A = 0', 'A is diagonal'], correct: 'A is singular', explanation: 'A matrix with determinant 0 is singular (non-invertible).', difficulty: 'easy', topic: 'Determinant Properties' },
-      { id: 'math-11-4-8', question: 'What is the determinant of [[2, 1], [4, 2]]?', options: ['0', '4', '8', '2'], correct: '0', explanation: 'det([[2, 1], [4, 2]]) = 2×2 - 1×4 = 4 - 4 = 0.', difficulty: 'easy', topic: '2×2 Determinants' },
-      { id: 'math-11-4-9', question: 'What happens to the determinant when two rows are swapped?', options: ['Changes sign', 'Becomes zero', 'Doubles', 'Remains same'], correct: 'Changes sign', explanation: 'Swapping two rows changes the sign of the determinant.', difficulty: 'easy', topic: 'Determinant Properties' },
-      { id: 'math-11-4-10', question: 'What is the determinant of [[3, 0, 0], [0, 2, 0], [0, 0, 1]]?', options: ['6', '5', '3', '0'], correct: '6', explanation: 'For diagonal matrix, determinant = product of diagonal elements = 3×2×1 = 6.', difficulty: 'easy', topic: '3×3 Determinants' },
+      {
+        id: 'math-11-4-1',
+        question: 'What is the determinant of [[3, 2], [1, 4]]?',
+        options: ['10', '12', '14', '6'],
+        correct: '10',
+        explanation: 'For 2×2 matrix [[a,b],[c,d]], determinant = ad - bc = 3×4 - 2×1 = 12 - 2 = 10.',
+        difficulty: 'easy',
+        topic: '2×2 Determinants'
+      },
+      {
+        id: 'math-11-4-2',
+        question: 'What is the determinant of [[1, 2, 3], [0, 4, 5], [0, 0, 6]]?',
+        options: ['24', '30', '120', '6'],
+        correct: '24',
+        explanation: 'For upper triangular matrix, determinant is the product of diagonal elements: 1×4×6 = 24.',
+        difficulty: 'easy',
+        topic: '3×3 Determinants'
+      },
+      {
+        id: 'math-11-4-3',
+        question: 'If two rows of a matrix are identical, what is its determinant?',
+        options: ['0', '1', '-1', 'Cannot be determined'],
+        correct: '0',
+        explanation: 'If a matrix has two identical rows (or columns), its determinant is always 0.',
+        difficulty: 'easy',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-4',
+        question: 'What is the determinant of [[5, 0], [0, 3]]?',
+        options: ['15', '8', '5', '3'],
+        correct: '15',
+        explanation: 'For diagonal matrix, determinant = product of diagonal elements = 5×3 = 15.',
+        difficulty: 'easy',
+        topic: '2×2 Determinants'
+      },
+      {
+        id: 'math-11-4-5',
+        question: 'What is the determinant of the identity matrix I₂?',
+        options: ['1', '0', '2', '4'],
+        correct: '1',
+        explanation: 'The determinant of any identity matrix is 1.',
+        difficulty: 'easy',
+        topic: 'Special Determinants'
+      },
+      {
+        id: 'math-11-4-6',
+        question: 'What is the determinant of [[1, 0], [0, 1]]?',
+        options: ['1', '0', '2', '-1'],
+        correct: '1',
+        explanation: 'det([[1, 0], [0, 1]]) = 1×1 - 0×0 = 1.',
+        difficulty: 'easy',
+        topic: '2×2 Determinants'
+      },
+      {
+        id: 'math-11-4-7',
+        question: 'If A is a 2×2 matrix with det(A) = 0, what can we conclude?',
+        options: ['A is singular', 'A is invertible', 'A = 0', 'A is diagonal'],
+        correct: 'A is singular',
+        explanation: 'A matrix with determinant 0 is singular (non-invertible).',
+        difficulty: 'easy',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-8',
+        question: 'What is the determinant of [[2, 1], [4, 2]]?',
+        options: ['0', '4', '8', '2'],
+        correct: '0',
+        explanation: 'det([[2, 1], [4, 2]]) = 2×2 - 1×4 = 4 - 4 = 0.',
+        difficulty: 'easy',
+        topic: '2×2 Determinants'
+      },
+      {
+        id: 'math-11-4-9',
+        question: 'What happens to the determinant when two rows are swapped?',
+        options: ['Changes sign', 'Becomes zero', 'Doubles', 'Remains same'],
+        correct: 'Changes sign',
+        explanation: 'Swapping two rows changes the sign of the determinant.',
+        difficulty: 'easy',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-10',
+        question: 'What is the determinant of [[3, 0, 0], [0, 2, 0], [0, 0, 1]]?',
+        options: ['6', '5', '3', '0'],
+        correct: '6',
+        explanation: 'For diagonal matrix, determinant = product of diagonal elements = 3×2×1 = 6.',
+        difficulty: 'easy',
+        topic: '3×3 Determinants'
+      },
 
       // Medium Questions (10)
-      { id: 'math-11-4-11', question: 'If det(A) = 5, what is det(2A) for a 2×2 matrix?', options: ['10', '25', '20', '5'], correct: '20', explanation: 'For 2×2 matrix, det(kA) = k² det(A). So det(2A) = 2² × 5 = 4 × 5 = 20.', difficulty: 'medium', topic: 'Determinant Properties' },
-      { id: 'math-11-4-12', question: 'Calculate det([[1, 2, 3], [4, 5, 6], [7, 8, 9]])', options: ['0', '1', '-1', '45'], correct: '0', explanation: 'This matrix has linearly dependent rows (each row is an arithmetic progression), so determinant = 0.', difficulty: 'medium', topic: '3×3 Determinants' },
-      { id: 'math-11-4-13', question: 'If det(A) = 3 and det(B) = 4, what is det(AB)?', options: ['12', '7', '1', '0'], correct: '12', explanation: 'det(AB) = det(A) × det(B) = 3 × 4 = 12.', difficulty: 'medium', topic: 'Determinant Properties' },
-      { id: 'math-11-4-14', question: 'What is det(A⁻¹) if det(A) = 6?', options: ['1/6', '6', '-6', '1'], correct: '1/6', explanation: 'det(A⁻¹) = 1/det(A) = 1/6.', difficulty: 'medium', topic: 'Determinant Properties' },
-      { id: 'math-11-4-15', question: 'Calculate det([[2, 1, 0], [1, 2, 1], [0, 1, 2]])', options: ['4', '6', '8', '2'], correct: '4', explanation: 'Expand along first row: 2×det([[2,1],[1,2]]) - 1×det([[1,1],[0,2]]) + 0 = 2×3 - 1×2 = 4.', difficulty: 'medium', topic: '3×3 Determinants' },
-      { id: 'math-11-4-16', question: 'If a row of a matrix is multiplied by k, what happens to the determinant?', options: ['Multiplied by k', 'Multiplied by k²', 'Divided by k', 'Unchanged'], correct: 'Multiplied by k', explanation: 'Multiplying a row by scalar k multiplies the determinant by k.', difficulty: 'medium', topic: 'Determinant Properties' },
-      { id: 'math-11-4-17', question: 'What is det(Aᵀ) if det(A) = -3?', options: ['-3', '3', '1/3', '9'], correct: '-3', explanation: 'det(Aᵀ) = det(A) = -3.', difficulty: 'medium', topic: 'Determinant Properties' },
-      { id: 'math-11-4-18', question: 'Calculate det([[1, 2], [3, 4]]) using cofactor expansion', options: ['-2', '2', '10', '-10'], correct: '-2', explanation: 'Expand along first row: 1×det([4]) - 2×det([3]) = 1×4 - 2×3 = -2.', difficulty: 'medium', topic: 'Cofactor Expansion' },
-      { id: 'math-11-4-19', question: 'If det(A) = 2, what is det(3A) for a 3×3 matrix?', options: ['6', '18', '54', '8'], correct: '54', explanation: 'For 3×3 matrix, det(kA) = k³ det(A). So det(3A) = 3³ × 2 = 27 × 2 = 54.', difficulty: 'medium', topic: 'Determinant Properties' },
-      { id: 'math-11-4-20', question: 'What is the determinant of [[a, b], [b, a]]?', options: ['a² - b²', 'a² + b²', '2ab', 'ab'], correct: 'a² - b²', explanation: 'det([[a, b], [b, a]]) = a×a - b×b = a² - b².', difficulty: 'medium', topic: 'Parametric Determinants' },
+      {
+        id: 'math-11-4-11',
+        question: 'If det(A) = 5, what is det(2A) for a 2×2 matrix?',
+        options: ['10', '25', '20', '5'],
+        correct: '20',
+        explanation: 'For 2×2 matrix, det(kA) = k² det(A). So det(2A) = 2² × 5 = 4 × 5 = 20.',
+        difficulty: 'medium',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-12',
+        question: 'Calculate det([[1, 2, 3], [4, 5, 6], [7, 8, 9]])',
+        options: ['0', '1', '-1', '45'],
+        correct: '0',
+        explanation: 'This matrix has linearly dependent rows (each row is an arithmetic progression), so determinant = 0.',
+        difficulty: 'medium',
+        topic: '3×3 Determinants'
+      },
+      {
+        id: 'math-11-4-13',
+        question: 'If det(A) = 3 and det(B) = 4, what is det(AB)?',
+        options: ['12', '7', '1', '0'],
+        correct: '12',
+        explanation: 'det(AB) = det(A) × det(B) = 3 × 4 = 12.',
+        difficulty: 'medium',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-14',
+        question: 'What is det(A⁻¹) if det(A) = 6?',
+        options: ['1/6', '6', '-6', '1'],
+        correct: '1/6',
+        explanation: 'det(A⁻¹) = 1/det(A) = 1/6.',
+        difficulty: 'medium',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-15',
+        question: 'Calculate det([[2, 1, 0], [1, 2, 1], [0, 1, 2]])',
+        options: ['4', '6', '8', '2'],
+        correct: '4',
+        explanation: 'Expand along first row: 2×det([[2,1],[1,2]]) - 1×det([[1,1],[0,2]]) + 0 = 2×3 - 1×2 = 4.',
+        difficulty: 'medium',
+        topic: '3×3 Determinants'
+      },
+      {
+        id: 'math-11-4-16',
+        question: 'If a row of a matrix is multiplied by k, what happens to the determinant?',
+        options: ['Multiplied by k', 'Multiplied by k²', 'Divided by k', 'Unchanged'],
+        correct: 'Multiplied by k',
+        explanation: 'Multiplying a row by scalar k multiplies the determinant by k.',
+        difficulty: 'medium',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-17',
+        question: 'What is det(Aᵀ) if det(A) = -3?',
+        options: ['-3', '3', '1/3', '9'],
+        correct: '-3',
+        explanation: 'det(Aᵀ) = det(A) = -3.',
+        difficulty: 'medium',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-18',
+        question: 'Calculate det([[1, 2], [3, 4]]) using cofactor expansion',
+        options: ['-2', '2', '10', '-10'],
+        correct: '-2',
+        explanation: 'Expand along first row: 1×det([4]) - 2×det([3]) = 1×4 - 2×3 = -2.',
+        difficulty: 'medium',
+        topic: 'Cofactor Expansion'
+      },
+      {
+        id: 'math-11-4-19',
+        question: 'If det(A) = 2, what is det(3A) for a 3×3 matrix?',
+        options: ['6', '18', '54', '8'],
+        correct: '54',
+        explanation: 'For 3×3 matrix, det(kA) = k³ det(A). So det(3A) = 3³ × 2 = 27 × 2 = 54.',
+        difficulty: 'medium',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-20',
+        question: 'What is the determinant of [[a, b], [b, a]]?',
+        options: ['a² - b²', 'a² + b²', '2ab', 'ab'],
+        correct: 'a² - b²',
+        explanation: 'det([[a, b], [b, a]]) = a×a - b×b = a² - b².',
+        difficulty: 'medium',
+        topic: 'Parametric Determinants'
+      },
 
       // Hard Questions (10)
-      { id: 'math-11-4-21', question: 'Find det([[1, 1, 1], [a, b, c], [a², b², c²]]) (Vandermonde determinant)', options: ['(b-a)(c-a)(c-b)', '(a-b)(b-c)(c-a)', 'abc', '0'], correct: '(b-a)(c-a)(c-b)', explanation: 'This is a Vandermonde determinant with value (b-a)(c-a)(c-b).', difficulty: 'hard', topic: 'Special Determinants' },
-      { id: 'math-11-4-22', question: 'If A is 4×4 and det(A) = 12, what is det(2A)?', options: ['24', '48', '192', '144'], correct: '192', explanation: 'For 4×4 matrix, det(kA) = k⁴ det(A). So det(2A) = 2⁴ × 12 = 16 × 12 = 192.', difficulty: 'hard', topic: 'Determinant Properties' },
-      { id: 'math-11-4-23', question: 'What is the determinant of [[cos θ, -sin θ], [sin θ, cos θ]]?', options: ['1', 'cos θ', 'sin θ', '0'], correct: '1', explanation: 'det = cos²θ - (-sin θ)(sin θ) = cos²θ + sin²θ = 1.', difficulty: 'hard', topic: 'Trigonometric Determinants' },
-      { id: 'math-11-4-24', question: 'Find the value of x such that det([[x, 2], [3, x]]) = 5', options: ['x = ±√11', 'x = ±3', 'x = ±√14', 'x = ±2'], correct: 'x = ±√11', explanation: 'det = x² - 6 = 5, so x² = 11, x = ±√11.', difficulty: 'hard', topic: 'Determinant Equations' },
-      { id: 'math-11-4-25', question: 'Calculate det([[2, 1, 3], [1, 0, 2], [3, 1, 4]])', options: ['-1', '1', '0', '2'], correct: '-1', explanation: 'Use cofactor expansion or row operations to get det = -1.', difficulty: 'hard', topic: '3×3 Determinants' },
-      { id: 'math-11-4-26', question: 'If A = BC where B, C are 3×3 matrices with det(B) = 2, det(C) = -3, find det(A)', options: ['-6', '6', '-1', '1'], correct: '-6', explanation: 'det(A) = det(BC) = det(B) × det(C) = 2 × (-3) = -6.', difficulty: 'hard', topic: 'Determinant Properties' },
-      { id: 'math-11-4-27', question: 'What is det([[1, a, a²], [1, b, b²], [1, c, c²]])?', options: ['(b-a)(c-a)(c-b)', '(a-b)(b-c)(c-a)', 'abc', '1'], correct: '(b-a)(c-a)(c-b)', explanation: 'This is a Vandermonde determinant.', difficulty: 'hard', topic: 'Vandermonde Determinant' },
-      { id: 'math-11-4-28', question: 'If det(A - λI) = 0 has solutions λ = 2, 3, what is det(A) for 2×2 matrix A?', options: ['6', '5', '-1', '1'], correct: '6', explanation: 'For 2×2 matrix, det(A) = product of eigenvalues = 2 × 3 = 6.', difficulty: 'hard', topic: 'Characteristic Equation' },
-      { id: 'math-11-4-29', question: 'Calculate det([[a, b, c], [b, c, a], [c, a, b]]) (circulant matrix)', options: ['a³ + b³ + c³ - 3abc', '(a+b+c)³', 'abc', '0'], correct: 'a³ + b³ + c³ - 3abc', explanation: 'For circulant matrix, this is the determinant formula.', difficulty: 'hard', topic: 'Circulant Determinant' },
-      { id: 'math-11-4-30', question: 'What is det(A²) if det(A) = -2?', options: ['4', '-4', '2', '-2'], correct: '4', explanation: 'det(A²) = det(A × A) = det(A) × det(A) = (-2) × (-2) = 4.', difficulty: 'hard', topic: 'Determinant Properties' }
+      {
+        id: 'math-11-4-21',
+        question: 'Calculate det([[1, 2, 3], [0, 1, 4], [0, 0, 2]]) using properties',
+        options: ['2', '4', '8', '6'],
+        correct: '2',
+        explanation: 'Upper triangular matrix: determinant = product of diagonal = 1×1×2 = 2.',
+        difficulty: 'hard',
+        topic: '3×3 Determinants'
+      },
+      {
+        id: 'math-11-4-22',
+        question: 'Find det([[1, 1, 1], [a, b, c], [a², b², c²]]) (Vandermonde determinant)',
+        options: ['(b-a)(c-a)(c-b)', '(a-b)(b-c)(c-a)', 'abc', '0'],
+        correct: '(b-a)(c-a)(c-b)',
+        explanation: 'This is a Vandermonde determinant with value (b-a)(c-a)(c-b).',
+        difficulty: 'hard',
+        topic: 'Special Determinants'
+      },
+      {
+        id: 'math-11-4-23',
+        question: 'If A is 4×4 and det(A) = 12, what is det(2A)?',
+        options: ['24', '48', '192', '144'],
+        correct: '192',
+        explanation: 'For 4×4 matrix, det(kA) = k⁴ det(A). So det(2A) = 2⁴ × 12 = 16 × 12 = 192.',
+        difficulty: 'hard',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-24',
+        question: 'Calculate det([[2, 1, 3], [1, 0, 2], [3, 1, 4]])',
+        options: ['-1', '1', '0', '2'],
+        correct: '-1',
+        explanation: 'Use cofactor expansion or row operations to get det = -1.',
+        difficulty: 'hard',
+        topic: '3×3 Determinants'
+      },
+      {
+        id: 'math-11-4-25',
+        question: 'What is the determinant of [[cos θ, -sin θ], [sin θ, cos θ]]?',
+        options: ['1', 'cos θ', 'sin θ', '0'],
+        correct: '1',
+        explanation: 'det = cos²θ - (-sin θ)(sin θ) = cos²θ + sin²θ = 1.',
+        difficulty: 'hard',
+        topic: 'Trigonometric Determinants'
+      },
+      {
+        id: 'math-11-4-26',
+        question: 'If A = BC where B, C are 3×3 matrices with det(B) = 2, det(C) = -3, find det(A)',
+        options: ['-6', '6', '-1', '1'],
+        correct: '-6',
+        explanation: 'det(A) = det(BC) = det(B) × det(C) = 2 × (-3) = -6.',
+        difficulty: 'hard',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-27',
+        question: 'Find the value of x such that det([[x, 2], [3, x]]) = 5',
+        options: ['x = ±√11', 'x = ±3', 'x = ±√14', 'x = ±2'],
+        correct: 'x = ±√11',
+        explanation: 'det = x² - 6 = 5, so x² = 11, x = ±√11.',
+        difficulty: 'hard',
+        topic: 'Determinant Equations'
+      },
+      {
+        id: 'math-11-4-28',
+        question: 'What is det([[1, a, a²], [1, b, b²], [1, c, c²]])?',
+        options: ['(b-a)(c-a)(c-b)', '(a-b)(b-c)(c-a)', 'abc', '1'],
+        correct: '(b-a)(c-a)(c-b)',
+        explanation: 'This is a Vandermonde determinant.',
+        difficulty: 'hard',
+        topic: 'Vandermonde Determinant'
+      },
+      {
+        id: 'math-11-4-29',
+        question: 'If det(A - λI) = 0 has solutions λ = 2, 3, what is det(A) for 2×2 matrix A?',
+        options: ['6', '5', '-1', '1'],
+        correct: '6',
+        explanation: 'For 2×2 matrix, det(A) = product of eigenvalues = 2 × 3 = 6.',
+        difficulty: 'hard',
+        topic: 'Characteristic Equation'
+      },
+      {
+        id: 'math-11-4-30',
+        question: 'Calculate det([[a, b, c], [b, c, a], [c, a, b]]) (circulant matrix)',
+        options: ['a³ + b³ + c³ - 3abc', '(a+b+c)(a²+b²+c²-ab-bc-ca)', 'abc', '0'],
+        correct: 'a³ + b³ + c³ - 3abc',
+        explanation: 'For circulant matrix, this is the determinant formula.',
+        difficulty: 'hard',
+        topic: 'Circulant Determinant'
+      }
     ]
   },
   {
