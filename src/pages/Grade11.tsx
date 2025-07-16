@@ -10,83 +10,11 @@ const Grade11 = () => {
   const subjects = [
     {
       id: 'mathematics',
-      name: 'Advanced Mathematics',
-      description: 'Advanced algebra, trigonometry, and pre-calculus',
+      name: 'Mathematics',
+      description: 'Relations, functions, matrices, vectors, transformations, statistics, and probability',
       icon: Calculator,
       color: 'bg-blue-600',
-      questions: 150
-    },
-    {
-      id: 'physics',
-      name: 'Advanced Physics',
-      description: 'Thermodynamics, electricity, and modern physics',
-      icon: Atom,
-      color: 'bg-purple-600',
-      questions: 130
-    },
-    {
-      id: 'chemistry',
-      name: 'Advanced Chemistry',
-      description: 'Organic chemistry, chemical equilibrium, and kinetics',
-      icon: Atom,
-      color: 'bg-green-600',
-      questions: 125
-    },
-    {
-      id: 'biology',
-      name: 'Advanced Biology',
-      description: 'Human anatomy, molecular biology, and evolution',
-      icon: Leaf,
-      color: 'bg-emerald-600',
-      questions: 140
-    },
-    {
-      id: 'english',
-      name: 'Advanced English',
-      description: 'Advanced literature analysis and composition',
-      icon: Languages,
-      color: 'bg-red-600',
-      questions: 115
-    },
-    {
-      id: 'history',
-      name: 'Advanced History',
-      description: 'Modern world history and Ethiopian studies',
-      icon: History,
-      color: 'bg-amber-600',
       questions: 120
-    },
-    {
-      id: 'geography',
-      name: 'Advanced Geography',
-      description: 'Regional geography and environmental studies',
-      icon: Globe,
-      color: 'bg-cyan-600',
-      questions: 110
-    },
-    {
-      id: 'economics',
-      name: 'Economics',
-      description: 'Microeconomics and macroeconomics principles',
-      icon: Briefcase,
-      color: 'bg-orange-600',
-      questions: 105
-    },
-    {
-      id: 'general-business',
-      name: 'General Business',
-      description: 'Business fundamentals and entrepreneurship',
-      icon: Users,
-      color: 'bg-slate-600',
-      questions: 95
-    },
-    {
-      id: 'technical-drawing',
-      name: 'Technical Drawing',
-      description: 'Engineering drawing and design principles',
-      icon: Wrench,
-      color: 'bg-gray-600',
-      questions: 80
     }
   ];
 
