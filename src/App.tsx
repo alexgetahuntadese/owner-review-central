@@ -1,5 +1,5 @@
 
-import React, { Suspense, lazy, useState, useEffect } from "react";
+import React, { Suspense, lazy, useState, useEffect, createContext } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -30,7 +30,7 @@ const LoadingSpinner = () => (
 );
 
 // Simple authentication context
-const AuthContext = React.createContext<{
+const AuthContext = createContext<{
   isAuthenticated: boolean;
   login: (email: string, password: string) => boolean;
   register: (email: string, password: string) => boolean;
