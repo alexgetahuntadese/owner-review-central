@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Grade11 from "./pages/Grade11";
 
 // Lazy load components
 const Index = lazy(() => import("./pages/Index"));
@@ -7,7 +8,6 @@ const Login = lazy(() => import("./pages/Login"));
 const SignUp = lazy(() => import("./pages/SignUp"));
 const Grade9 = lazy(() => import("./pages/Grade9"));
 const Grade10 = lazy(() => import("./pages/Grade10"));
-const Grade11 = lazy(() => import("./pages/Grade11"));
 const Grade12 = lazy(() => import("./pages/Grade12"));
 const Subject = lazy(() => import("./pages/Subject"));
 const Quiz = lazy(() => import("./pages/Quiz"));
