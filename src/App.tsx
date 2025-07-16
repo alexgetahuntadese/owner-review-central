@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import * as React from "react";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
@@ -15,27 +15,67 @@ import Grade12Subject from "./pages/Grade12Subject";
 import Grade12Quiz from "./pages/Grade12Quiz";
 import NotFound from "./pages/NotFound";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Index />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
+  },
+  {
+    path: "/grade9",
+    element: <Grade9 />,
+  },
+  {
+    path: "/grade10",
+    element: <Grade10 />,
+  },
+  {
+    path: "/grade11",
+    element: <Grade11 />,
+  },
+  {
+    path: "/grade-12",
+    element: <Grade12 />,
+  },
+  {
+    path: "/grade11/:subject",
+    element: <Grade11Subject />,
+  },
+  {
+    path: "/grade11/:subject/:chapter/:difficulty",
+    element: <Grade11Quiz />,
+  },
+  {
+    path: "/grade-12/:subject",
+    element: <Grade12Subject />,
+  },
+  {
+    path: "/grade-12/:subject/:chapter/:difficulty",
+    element: <Grade12Quiz />,
+  },
+  {
+    path: "/:grade/:subject",
+    element: <Subject />,
+  },
+  {
+    path: "/:grade/:subject/:chapter/:difficulty",
+    element: <Quiz />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
+  },
+]);
+
 const App = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/" element={<Index />} />
-          <Route path="/grade9" element={<Grade9 />} />
-          <Route path="/grade10" element={<Grade10 />} />
-          <Route path="/grade11" element={<Grade11 />} />
-          <Route path="/grade-12" element={<Grade12 />} />
-          <Route path="/:grade/:subject" element={<Subject />} />
-          <Route path="/:grade/:subject/:chapter/:difficulty" element={<Quiz />} />
-          <Route path="/grade11/:subject" element={<Grade11Subject />} />
-          <Route path="/grade11/:subject/:chapter/:difficulty" element={<Grade11Quiz />} />
-          <Route path="/grade-12/:subject" element={<Grade12Subject />} />
-          <Route path="/grade-12/:subject/:chapter/:difficulty" element={<Grade12Quiz />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
