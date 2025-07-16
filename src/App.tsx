@@ -1,33 +1,24 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Grade9 from "./pages/Grade9";
+import Grade10 from "./pages/Grade10";
 import Grade11 from "./pages/Grade11";
+import Grade12 from "./pages/Grade12";
+import Subject from "./pages/Subject";
+import Quiz from "./pages/Quiz";
 import Grade11Subject from "./pages/Grade11Subject";
-
-// Lazy load components
-const Index = lazy(() => import("./pages/Index"));
-const Login = lazy(() => import("./pages/Login"));
-const SignUp = lazy(() => import("./pages/SignUp"));
-const Grade9 = lazy(() => import("./pages/Grade9"));
-const Grade10 = lazy(() => import("./pages/Grade10"));
-const Grade12 = lazy(() => import("./pages/Grade12"));
-const Subject = lazy(() => import("./pages/Subject"));
-const Quiz = lazy(() => import("./pages/Quiz"));
-const Grade11Quiz = lazy(() => import("./pages/Grade11Quiz"));
-const Grade12Subject = lazy(() => import("./pages/Grade12Subject"));
-const Grade12Quiz = lazy(() => import("./pages/Grade12Quiz"));
-const NotFound = lazy(() => import("./pages/NotFound"));
-
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-  </div>
-);
+import Grade11Quiz from "./pages/Grade11Quiz";
+import Grade12Subject from "./pages/Grade12Subject";
+import Grade12Quiz from "./pages/Grade12Quiz";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes>
+      <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/" element={<Index />} />
@@ -41,9 +32,8 @@ const App = () => {
           <Route path="/grade11/:subject/:chapter/:difficulty" element={<Grade11Quiz />} />
           <Route path="/grade-12/:subject" element={<Grade12Subject />} />
           <Route path="/grade-12/:subject/:chapter/:difficulty" element={<Grade12Quiz />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   );
 };
