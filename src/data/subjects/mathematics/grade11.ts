@@ -6,7 +6,6 @@ export const grade11MathematicsChapters: Chapter[] = [
     name: 'Relations and Functions',
     description: 'Understanding relations and functions, their properties and applications',
     questions: [
-      // Easy Questions (10)
       {
         id: 'math-11-1-1',
         question: 'What is the domain of the function f(x) = √(x-2)?',
@@ -27,15 +26,6 @@ export const grade11MathematicsChapters: Chapter[] = [
       },
       {
         id: 'math-11-1-3',
-        question: 'What is the range of f(x) = x² for x ∈ ℝ?',
-        options: ['[0, ∞)', '(-∞, ∞)', '[1, ∞)', '(-∞, 0]'],
-        correct: '[0, ∞)',
-        explanation: 'Since x² is always non-negative for real numbers, the range is [0, ∞).',
-        difficulty: 'easy',
-        topic: 'Domain and Range'
-      },
-      {
-        id: 'math-11-1-4',
         question: 'If f(x) = 3x + 2, what is f(0)?',
         options: ['0', '2', '3', '5'],
         correct: '2',
@@ -44,7 +34,7 @@ export const grade11MathematicsChapters: Chapter[] = [
         topic: 'Function Evaluation'
       },
       {
-        id: 'math-11-1-5',
+        id: 'math-11-1-4',
         question: 'What is the inverse of f(x) = x + 5?',
         options: ['f⁻¹(x) = x - 5', 'f⁻¹(x) = x + 5', 'f⁻¹(x) = 5 - x', 'f⁻¹(x) = 1/(x + 5)'],
         correct: 'f⁻¹(x) = x - 5',
@@ -53,231 +43,377 @@ export const grade11MathematicsChapters: Chapter[] = [
         topic: 'Inverse Functions'
       },
       {
-        id: 'math-11-1-6',
-        question: 'Which of the following is NOT a function?',
-        options: ['x = y²', 'y = x²', 'y = 2x + 1', 'y = |x|'],
-        correct: 'x = y²',
-        explanation: 'x = y² fails the vertical line test; for one x-value, there can be two y-values.',
-        difficulty: 'easy',
-        topic: 'Function Definition'
-      },
-      {
-        id: 'math-11-1-7',
-        question: 'What is the domain of f(x) = 1/x?',
-        options: ['All real numbers', 'x ≠ 0', 'x > 0', 'x ≥ 0'],
-        correct: 'x ≠ 0',
-        explanation: 'Division by zero is undefined, so x cannot equal 0.',
-        difficulty: 'easy',
-        topic: 'Domain and Range'
-      },
-      {
-        id: 'math-11-1-8',
-        question: 'If f(x) = x², what is f(-3)?',
-        options: ['-9', '9', '6', '-6'],
-        correct: '9',
-        explanation: 'f(-3) = (-3)² = 9.',
-        difficulty: 'easy',
-        topic: 'Function Evaluation'
-      },
-      {
-        id: 'math-11-1-9',
-        question: 'What is the y-intercept of f(x) = 2x - 4?',
-        options: ['2', '-4', '4', '0'],
-        correct: '-4',
-        explanation: 'The y-intercept occurs when x = 0: f(0) = 2(0) - 4 = -4.',
-        difficulty: 'easy',
-        topic: 'Function Properties'
-      },
-      {
-        id: 'math-11-1-10',
-        question: 'Which function is even?',
-        options: ['f(x) = x³', 'f(x) = x² + 1', 'f(x) = x + 1', 'f(x) = x²+ x'],
-        correct: 'f(x) = x² + 1',
-        explanation: 'A function is even if f(-x) = f(x). For f(x) = x² + 1: f(-x) = (-x)² + 1 = x² + 1 = f(x).',
-        difficulty: 'easy',
-        topic: 'Function Symmetry'
-      },
-      // Medium Questions (10)
-      {
-        id: 'math-11-1-11',
+        id: 'math-11-1-5',
         question: 'If f(x) = 2x + 3 and g(x) = x², what is (f∘g)(x)?',
         options: ['2x² + 3', '2x + 3x²', '(2x + 3)²', '2(x + 3)²'],
         correct: '2x² + 3',
         explanation: '(f∘g)(x) = f(g(x)) = f(x²) = 2(x²) + 3 = 2x² + 3',
         difficulty: 'medium',
         topic: 'Function Composition'
+      }
+    ]
+  },
+  {
+    id: 'math-11-2',
+    name: 'Rational Expression and Rational Functions',
+    description: 'Working with rational expressions, equations, and functions',
+    questions: [
+      {
+        id: 'math-11-2-1',
+        question: 'Simplify: (x² - 4)/(x + 2)',
+        options: ['x - 2', 'x + 2', 'x² - 4', '(x - 2)(x + 2)'],
+        correct: 'x - 2',
+        explanation: 'Factor the numerator: x² - 4 = (x - 2)(x + 2). Cancel (x + 2): result is x - 2.',
+        difficulty: 'easy',
+        topic: 'Simplifying Rational Expressions'
       },
       {
-        id: 'math-11-1-12',
-        question: 'What is the inverse of f(x) = 2x - 6?',
-        options: ['f⁻¹(x) = (x + 6)/2', 'f⁻¹(x) = (x - 6)/2', 'f⁻¹(x) = 2x + 6', 'f⁻¹(x) = x/2 + 3'],
-        correct: 'f⁻¹(x) = (x + 6)/2',
-        explanation: 'Let y = 2x - 6, then x = 2y - 6. Solving for y: x + 6 = 2y, so y = (x + 6)/2.',
-        difficulty: 'medium',
-        topic: 'Inverse Functions'
-      },
-      {
-        id: 'math-11-1-13',
-        question: 'If g(x) = x + 1 and h(x) = x - 1, what is (g∘h)(x)?',
-        options: ['x', '2x', 'x²', 'x + 2'],
-        correct: 'x',
-        explanation: '(g∘h)(x) = g(h(x)) = g(x - 1) = (x - 1) + 1 = x.',
-        difficulty: 'medium',
-        topic: 'Function Composition'
-      },
-      {
-        id: 'math-11-1-14',
-        question: 'What is the domain of f(x) = √(4 - x²)?',
-        options: ['[-2, 2]', '(-2, 2)', '[0, 2]', '(-∞, ∞)'],
-        correct: '[-2, 2]',
-        explanation: 'For the square root to be defined: 4 - x² ≥ 0, so x² ≤ 4, which gives -2 ≤ x ≤ 2.',
-        difficulty: 'medium',
-        topic: 'Domain and Range'
-      },
-      {
-        id: 'math-11-1-15',
-        question: 'If f(x) = x² - 4x + 3, what is the vertex form?',
-        options: ['f(x) = (x - 2)² - 1', 'f(x) = (x - 2)² + 1', 'f(x) = (x + 2)² - 1', 'f(x) = (x - 1)² - 2'],
-        correct: 'f(x) = (x - 2)² - 1',
-        explanation: 'Complete the square: f(x) = x² - 4x + 3 = (x - 2)² - 4 + 3 = (x - 2)² - 1.',
-        difficulty: 'medium',
-        topic: 'Quadratic Functions'
-      },
-      {
-        id: 'math-11-1-16',
-        question: 'What is the range of f(x) = -x² + 4?',
-        options: ['(-∞, 4]', '[4, ∞)', '[0, 4]', '(-∞, ∞)'],
-        correct: '(-∞, 4]',
-        explanation: 'Since the parabola opens downward with vertex at (0, 4), the maximum value is 4.',
-        difficulty: 'medium',
-        topic: 'Domain and Range'
-      },
-      {
-        id: 'math-11-1-17',
-        question: 'If f(x) = 3x + 1 and f(a) = 10, what is a?',
-        options: ['3', '4', '9', '11'],
-        correct: '3',
-        explanation: 'f(a) = 3a + 1 = 10, so 3a = 9, therefore a = 3.',
-        difficulty: 'medium',
-        topic: 'Function Evaluation'
-      },
-      {
-        id: 'math-11-1-18',
+        id: 'math-11-2-2',
         question: 'What is the domain of f(x) = 1/(x² - 9)?',
         options: ['x ≠ ±3', 'x ≠ 3', 'x ≠ -3', 'All real numbers'],
         correct: 'x ≠ ±3',
         explanation: 'The denominator cannot be zero: x² - 9 ≠ 0, so x ≠ ±3.',
-        difficulty: 'medium',
-        topic: 'Domain and Range'
+        difficulty: 'easy',
+        topic: 'Domain of Rational Functions'
       },
       {
-        id: 'math-11-1-19',
-        question: 'If f(x) = |x - 3|, what is f(1) + f(5)?',
-        options: ['2', '4', '6', '8'],
+        id: 'math-11-2-3',
+        question: 'Solve: 1/x + 1/(x+1) = 2/3',
+        options: ['x = 1/2', 'x = 2', 'x = 1/2 or x = -3/2', 'x = 3/2'],
+        correct: 'x = 1/2 or x = -3/2',
+        explanation: 'Multiply by common denominator 3x(x+1): 3(x+1) + 3x = 2x(x+1), which gives 2x² - 4x - 3 = 0.',
+        difficulty: 'medium',
+        topic: 'Rational Equations'
+      },
+      {
+        id: 'math-11-2-4',
+        question: 'Find the vertical asymptote of f(x) = (x+1)/(x-2)',
+        options: ['x = -1', 'x = 2', 'x = 1', 'x = -2'],
+        correct: 'x = 2',
+        explanation: 'Vertical asymptotes occur where the denominator is zero and numerator is non-zero.',
+        difficulty: 'medium',
+        topic: 'Asymptotes'
+      },
+      {
+        id: 'math-11-2-5',
+        question: 'What is the horizontal asymptote of f(x) = (3x² + 1)/(x² - 4)?',
+        options: ['y = 0', 'y = 1', 'y = 3', 'y = -4'],
+        correct: 'y = 3',
+        explanation: 'For rational functions where degrees are equal, the horizontal asymptote is the ratio of leading coefficients: 3/1 = 3.',
+        difficulty: 'hard',
+        topic: 'Asymptotes'
+      }
+    ]
+  },
+  {
+    id: 'math-11-3',
+    name: 'Matrices',
+    description: 'Matrix operations, properties, and applications',
+    questions: [
+      {
+        id: 'math-11-3-1',
+        question: 'What is the order of matrix [[1, 2, 3], [4, 5, 6]]?',
+        options: ['2×3', '3×2', '2×2', '3×3'],
+        correct: '2×3',
+        explanation: 'The matrix has 2 rows and 3 columns, so its order is 2×3.',
+        difficulty: 'easy',
+        topic: 'Matrix Basics'
+      },
+      {
+        id: 'math-11-3-2',
+        question: 'If A = [[1, 2], [3, 4]] and B = [[5, 6], [7, 8]], what is A + B?',
+        options: ['[[6, 8], [10, 12]]', '[[5, 12], [21, 32]]', '[[6, 7], [8, 10]]', '[[1, 8], [15, 4]]'],
+        correct: '[[6, 8], [10, 12]]',
+        explanation: 'Matrix addition: add corresponding elements. (1+5, 2+6), (3+7, 4+8) = (6, 8), (10, 12).',
+        difficulty: 'easy',
+        topic: 'Matrix Addition'
+      },
+      {
+        id: 'math-11-3-3',
+        question: 'What is the transpose of [[1, 2, 3], [4, 5, 6]]?',
+        options: ['[[1, 4], [2, 5], [3, 6]]', '[[1, 2, 3], [4, 5, 6]]', '[[4, 5, 6], [1, 2, 3]]', '[[6, 5, 4], [3, 2, 1]]'],
+        correct: '[[1, 4], [2, 5], [3, 6]]',
+        explanation: 'The transpose interchanges rows and columns.',
+        difficulty: 'easy',
+        topic: 'Matrix Transpose'
+      },
+      {
+        id: 'math-11-3-4',
+        question: 'If A = [[2, 1], [3, 4]] and B = [[1, 0], [2, 1]], what is AB?',
+        options: ['[[4, 1], [11, 4]]', '[[2, 0], [6, 4]]', '[[3, 1], [5, 5]]', '[[2, 1], [6, 4]]'],
+        correct: '[[4, 1], [11, 4]]',
+        explanation: 'Matrix multiplication: (2×1+1×2, 2×0+1×1), (3×1+4×2, 3×0+4×1) = (4, 1), (11, 4).',
+        difficulty: 'medium',
+        topic: 'Matrix Multiplication'
+      },
+      {
+        id: 'math-11-3-5',
+        question: 'What is the inverse of [[1, 2], [3, 4]]?',
+        options: ['Matrix [[-2, 1], [3/2, -1/2]]', 'Matrix [[4, -2], [-3, 1]]', 'Matrix [[-1/2, 1/2], [3/4, -1/4]]', 'Matrix [[1/4, -1/2], [-3/4, 1/2]]'],
+        correct: 'Matrix [[-2, 1], [3/2, -1/2]]',
+        explanation: 'For 2×2 matrix [[a,b],[c,d]], inverse is (1/det)[[d,-b],[-c,a]]. Det = 1×4-2×3 = -2.',
+        difficulty: 'hard',
+        topic: 'Matrix Inverse'
+      }
+    ]
+  },
+  {
+    id: 'math-11-4',
+    name: 'Determinants and their Properties',
+    description: 'Calculating determinants and understanding their properties',
+    questions: [
+      {
+        id: 'math-11-4-1',
+        question: 'What is the determinant of [[3, 2], [1, 4]]?',
+        options: ['10', '12', '14', '6'],
+        correct: '10',
+        explanation: 'For 2×2 matrix [[a,b],[c,d]], determinant = ad - bc = 3×4 - 2×1 = 12 - 2 = 10.',
+        difficulty: 'easy',
+        topic: '2×2 Determinants'
+      },
+      {
+        id: 'math-11-4-2',
+        question: 'If det(A) = 5, what is det(2A)?',
+        options: ['10', '25', '20', '5'],
+        correct: '20',
+        explanation: 'For 2×2 matrix, det(kA) = k² det(A). So det(2A) = 2² × 5 = 4 × 5 = 20.',
+        difficulty: 'medium',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-3',
+        question: 'What is the determinant of [[1, 2, 3], [0, 4, 5], [0, 0, 6]]?',
+        options: ['24', '30', '120', '6'],
+        correct: '24',
+        explanation: 'For upper triangular matrix, determinant is the product of diagonal elements: 1×4×6 = 24.',
+        difficulty: 'easy',
+        topic: '3×3 Determinants'
+      },
+      {
+        id: 'math-11-4-4',
+        question: 'If two rows of a matrix are identical, what is its determinant?',
+        options: ['0', '1', '-1', 'Cannot be determined'],
+        correct: '0',
+        explanation: 'If a matrix has two identical rows (or columns), its determinant is always 0.',
+        difficulty: 'easy',
+        topic: 'Determinant Properties'
+      },
+      {
+        id: 'math-11-4-5',
+        question: 'Calculate det([[1, 2, 3], [4, 5, 6], [7, 8, 9]])',
+        options: ['0', '1', '-1', '45'],
+        correct: '0',
+        explanation: 'This matrix has linearly dependent rows (each row is an arithmetic progression), so determinant = 0.',
+        difficulty: 'medium',
+        topic: '3×3 Determinants'
+      }
+    ]
+  },
+  {
+    id: 'math-11-5',
+    name: 'Vectors',
+    description: 'Vector operations, properties, and geometric applications',
+    questions: [
+      {
+        id: 'math-11-5-1',
+        question: 'What is the magnitude of vector v = (3, 4)?',
+        options: ['5', '7', '√7', '12'],
+        correct: '5',
+        explanation: 'Magnitude = √(3² + 4²) = √(9 + 16) = √25 = 5.',
+        difficulty: 'easy',
+        topic: 'Vector Magnitude'
+      },
+      {
+        id: 'math-11-5-2',
+        question: 'If u = (2, 3) and v = (1, -1), what is u + v?',
+        options: ['(3, 2)', '(1, 4)', '(2, -3)', '(3, -2)'],
+        correct: '(3, 2)',
+        explanation: 'Vector addition: (2, 3) + (1, -1) = (2+1, 3+(-1)) = (3, 2).',
+        difficulty: 'easy',
+        topic: 'Vector Addition'
+      },
+      {
+        id: 'math-11-5-3',
+        question: 'What is the dot product of u = (2, 3) and v = (4, 1)?',
+        options: ['11', '8', '7', '5'],
+        correct: '11',
+        explanation: 'Dot product: u·v = 2×4 + 3×1 = 8 + 3 = 11.',
+        difficulty: 'easy',
+        topic: 'Dot Product'
+      },
+      {
+        id: 'math-11-5-4',
+        question: 'What is the unit vector in the direction of v = (6, 8)?',
+        options: ['(3/5, 4/5)', '(6/10, 8/10)', '(1, 1)', '(6, 8)'],
+        correct: '(3/5, 4/5)',
+        explanation: 'Unit vector = v/|v|. |v| = √(36+64) = 10. So unit vector = (6/10, 8/10) = (3/5, 4/5).',
+        difficulty: 'medium',
+        topic: 'Unit Vectors'
+      },
+      {
+        id: 'math-11-5-5',
+        question: 'If vectors u and v are perpendicular, what is u·v?',
+        options: ['0', '1', '-1', '|u||v|'],
+        correct: '0',
+        explanation: 'Perpendicular vectors have a dot product of 0.',
+        difficulty: 'easy',
+        topic: 'Perpendicular Vectors'
+      }
+    ]
+  },
+  {
+    id: 'math-11-6',
+    name: 'Transformations of the Plane',
+    description: 'Geometric transformations including translations, rotations, and reflections',
+    questions: [
+      {
+        id: 'math-11-6-1',
+        question: 'What is the image of point (2, 3) under translation by vector (1, -2)?',
+        options: ['(3, 1)', '(1, 5)', '(3, -1)', '(1, 1)'],
+        correct: '(3, 1)',
+        explanation: 'Translation: (2, 3) + (1, -2) = (2+1, 3+(-2)) = (3, 1).',
+        difficulty: 'easy',
+        topic: 'Translation'
+      },
+      {
+        id: 'math-11-6-2',
+        question: 'What is the image of point (3, 4) reflected across the x-axis?',
+        options: ['(3, -4)', '(-3, 4)', '(-3, -4)', '(4, 3)'],
+        correct: '(3, -4)',
+        explanation: 'Reflection across x-axis changes y-coordinate sign: (3, 4) → (3, -4).',
+        difficulty: 'easy',
+        topic: 'Reflection'
+      },
+      {
+        id: 'math-11-6-3',
+        question: 'What is the image of point (1, 0) after 90° counterclockwise rotation about origin?',
+        options: ['(0, 1)', '(-1, 0)', '(0, -1)', '(1, 1)'],
+        correct: '(0, 1)',
+        explanation: '90° counterclockwise rotation: (x, y) → (-y, x). So (1, 0) → (0, 1).',
+        difficulty: 'medium',
+        topic: 'Rotation'
+      },
+      {
+        id: 'math-11-6-4',
+        question: 'What is the scaling of point (2, 3) by factor 2?',
+        options: ['(4, 6)', '(2, 6)', '(4, 3)', '(1, 1.5)'],
+        correct: '(4, 6)',
+        explanation: 'Scaling by factor k: (x, y) → (kx, ky). So (2, 3) → (2×2, 3×2) = (4, 6).',
+        difficulty: 'easy',
+        topic: 'Scaling'
+      },
+      {
+        id: 'math-11-6-5',
+        question: 'What transformation matrix represents reflection across y = x?',
+        options: ['Matrix [[0, 1], [1, 0]]', 'Matrix [[1, 0], [0, -1]]', 'Matrix [[-1, 0], [0, 1]]', 'Matrix [[0, -1], [1, 0]]'],
+        correct: 'Matrix [[0, 1], [1, 0]]',
+        explanation: 'Reflection across y = x swaps coordinates: (x, y) → (y, x).',
+        difficulty: 'medium',
+        topic: 'Transformation Matrices'
+      }
+    ]
+  },
+  {
+    id: 'math-11-7',
+    name: 'Statistics',
+    description: 'Descriptive statistics, measures of central tendency and dispersion',
+    questions: [
+      {
+        id: 'math-11-7-1',
+        question: 'What is the mean of {2, 4, 6, 8, 10}?',
+        options: ['6', '5', '7', '8'],
+        correct: '6',
+        explanation: 'Mean = (2+4+6+8+10)/5 = 30/5 = 6.',
+        difficulty: 'easy',
+        topic: 'Mean'
+      },
+      {
+        id: 'math-11-7-2',
+        question: 'What is the median of {3, 1, 4, 1, 5, 9, 2}?',
+        options: ['3', '4', '1', '5'],
+        correct: '3',
+        explanation: 'First sort: {1, 1, 2, 3, 4, 5, 9}. Middle value (4th position) is 3.',
+        difficulty: 'easy',
+        topic: 'Median'
+      },
+      {
+        id: 'math-11-7-3',
+        question: 'What is the mode of {2, 3, 3, 4, 5, 5, 5, 6}?',
+        options: ['5', '3', '4', 'No mode'],
+        correct: '5',
+        explanation: 'Mode is the most frequent value. 5 appears 3 times, more than any other value.',
+        difficulty: 'easy',
+        topic: 'Mode'
+      },
+      {
+        id: 'math-11-7-4',
+        question: 'What is the range of {10, 15, 20, 25, 30}?',
+        options: ['20', '15', '25', '30'],
+        correct: '20',
+        explanation: 'Range = Maximum - Minimum = 30 - 10 = 20.',
+        difficulty: 'easy',
+        topic: 'Range'
+      },
+      {
+        id: 'math-11-7-5',
+        question: 'If the variance of a dataset is 16, what is the standard deviation?',
+        options: ['4', '8', '16', '256'],
         correct: '4',
-        explanation: 'f(1) = |1 - 3| = |-2| = 2, f(5) = |5 - 3| = |2| = 2, so f(1) + f(5) = 4.',
+        explanation: 'Standard deviation = √(variance) = √16 = 4.',
+        difficulty: 'easy',
+        topic: 'Standard Deviation'
+      }
+    ]
+  },
+  {
+    id: 'math-11-8',
+    name: 'Probability',
+    description: 'Basic probability concepts, counting principles, and probability distributions',
+    questions: [
+      {
+        id: 'math-11-8-1',
+        question: 'What is the probability of rolling a 3 on a fair six-sided die?',
+        options: ['1/6', '1/3', '1/2', '3/6'],
+        correct: '1/6',
+        explanation: 'There is 1 favorable outcome (rolling 3) out of 6 possible outcomes.',
+        difficulty: 'easy',
+        topic: 'Basic Probability'
+      },
+      {
+        id: 'math-11-8-2',
+        question: 'If P(A) = 0.3 and P(B) = 0.4, what is P(A ∪ B) if A and B are mutually exclusive?',
+        options: ['0.7', '0.12', '0.1', '0.4'],
+        correct: '0.7',
+        explanation: 'For mutually exclusive events: P(A ∪ B) = P(A) + P(B) = 0.3 + 0.4 = 0.7.',
+        difficulty: 'easy',
+        topic: 'Mutually Exclusive Events'
+      },
+      {
+        id: 'math-11-8-3',
+        question: 'How many ways can 5 people be arranged in a row?',
+        options: ['120', '25', '10', '5'],
+        correct: '120',
+        explanation: 'Number of permutations = 5! = 5×4×3×2×1 = 120.',
+        difficulty: 'easy',
+        topic: 'Permutations'
+      },
+      {
+        id: 'math-11-8-4',
+        question: 'How many ways can 3 items be chosen from 5 items?',
+        options: ['10', '15', '6', '20'],
+        correct: '10',
+        explanation: 'Combinations: C(5,3) = 5!/(3!×2!) = 120/(6×2) = 10.',
         difficulty: 'medium',
-        topic: 'Absolute Value Functions'
+        topic: 'Combinations'
       },
       {
-        id: 'math-11-1-20',
-        question: 'What is the inverse of f(x) = x³?',
-        options: ['f⁻¹(x) = ∛x', 'f⁻¹(x) = x^(1/3)', 'f⁻¹(x) = x³', 'Both A and B'],
-        correct: 'Both A and B',
-        explanation: 'The inverse of f(x) = x³ is f⁻¹(x) = ∛x = x^(1/3).',
+        id: 'math-11-8-5',
+        question: 'If P(A) = 0.6 and P(A ∩ B) = 0.2, what is P(B|A)?',
+        options: ['1/3', '0.2', '0.4', '0.6'],
+        correct: '1/3',
+        explanation: 'Conditional probability: P(B|A) = P(A ∩ B)/P(A) = 0.2/0.6 = 1/3.',
         difficulty: 'medium',
-        topic: 'Inverse Functions'
-      },
-      // Hard Questions (10)
-      {
-        id: 'math-11-1-21',
-        question: 'If f(x) = (x² - 1)/(x + 1) for x ≠ -1, what is the simplified form?',
-        options: ['x - 1', 'x + 1', 'x² - 1', '(x - 1)/(x + 1)'],
-        correct: 'x - 1',
-        explanation: 'Factor numerator: (x² - 1) = (x - 1)(x + 1). Cancel (x + 1): f(x) = x - 1 for x ≠ -1.',
-        difficulty: 'hard',
-        topic: 'Rational Functions'
-      },
-      {
-        id: 'math-11-1-22',
-        question: 'If f(g(x)) = 2x + 1 and g(x) = x - 3, what is f(x)?',
-        options: ['f(x) = 2x + 7', 'f(x) = 2x - 5', 'f(x) = 2x + 1', 'f(x) = x + 4'],
-        correct: 'f(x) = 2x + 7',
-        explanation: 'Let u = g(x) = x - 3, so x = u + 3. Then f(u) = 2(u + 3) + 1 = 2u + 7, so f(x) = 2x + 7.',
-        difficulty: 'hard',
-        topic: 'Function Composition'
-      },
-      {
-        id: 'math-11-1-23',
-        question: 'What is the domain of f(x) = ln(x² - 4)?',
-        options: ['x ∈ (-∞, -2) ∪ (2, ∞)', 'x ∈ [-2, 2]', 'x ∈ (-2, 2)', 'x ∈ (-∞, ∞)'],
-        correct: 'x ∈ (-∞, -2) ∪ (2, ∞)',
-        explanation: 'For ln to be defined, x² - 4 > 0, so x² > 4, which gives x < -2 or x > 2.',
-        difficulty: 'hard',
-        topic: 'Logarithmic Functions'
-      },
-      {
-        id: 'math-11-1-24',
-        question: 'If f(x) = (ax + b)/(cx + d) and f(f(x)) = x, what condition must be satisfied?',
-        options: ['a + d = 0', 'ad - bc = -1', 'a = d and b = c = 0', 'ad + bc = 0'],
-        correct: 'a + d = 0',
-        explanation: 'For f(f(x)) = x (involution), the function must satisfy a + d = 0.',
-        difficulty: 'hard',
-        topic: 'Function Properties'
-      },
-      {
-        id: 'math-11-1-25',
-        question: 'What is the range of f(x) = 1/(x² + 1)?',
-        options: ['(0, 1]', '[0, 1]', '(0, 1)', '[1, ∞)'],
-        correct: '(0, 1]',
-        explanation: 'Since x² + 1 ≥ 1 for all real x, we have 1/(x² + 1) ≤ 1. As x → ∞, f(x) → 0, so range is (0, 1].',
-        difficulty: 'hard',
-        topic: 'Domain and Range'
-      },
-      {
-        id: 'math-11-1-26',
-        question: 'If f(x) = x/(x-1) and g(x) = 1/x, what is (f∘g)(x)?',
-        options: ['1/(1-x)', 'x/(x-1)', '1/(x-1)', 'x/(1-x)'],
-        correct: '1/(1-x)',
-        explanation: '(f∘g)(x) = f(g(x)) = f(1/x) = (1/x)/((1/x) - 1) = (1/x)/(1-x)/x = 1/(1-x).',
-        difficulty: 'hard',
-        topic: 'Function Composition'
-      },
-      {
-        id: 'math-11-1-27',
-        question: 'What is the inverse of f(x) = (2x + 1)/(x - 3)?',
-        options: ['f⁻¹(x) = (3x + 1)/(x - 2)', 'f⁻¹(x) = (x - 1)/(2x + 3)', 'f⁻¹(x) = (2x - 1)/(x + 3)', 'f⁻¹(x) = (x + 1)/(2x - 3)'],
-        correct: 'f⁻¹(x) = (3x + 1)/(x - 2)',
-        explanation: 'Let y = (2x + 1)/(x - 3). Solve for x: y(x - 3) = 2x + 1, yx - 3y = 2x + 1, x(y - 2) = 3y + 1, x = (3y + 1)/(y - 2).',
-        difficulty: 'hard',
-        topic: 'Inverse Functions'
-      },
-      {
-        id: 'math-11-1-28',
-        question: 'If f(x) = x² - 2x + 1, for what values of x is f(x) = f(2x)?',
-        options: ['x = 0, x = 1', 'x = 0, x = 3', 'x = 1, x = 3', 'x = 0, x = 2'],
-        correct: 'x = 0, x = 3',
-        explanation: 'f(x) = (x-1)², f(2x) = (2x-1)². Setting equal: (x-1)² = (2x-1)², so x-1 = ±(2x-1). This gives x = 0 or x = 3.',
-        difficulty: 'hard',
-        topic: 'Function Equations'
-      },
-      {
-        id: 'math-11-1-29',
-        question: 'What is the maximum value of f(x) = sin(x) + cos(x)?',
-        options: ['1', '√2', '2', '√3'],
-        correct: '√2',
-        explanation: 'f(x) = sin(x) + cos(x) = √2 sin(x + π/4). Maximum value is √2.',
-        difficulty: 'hard',
-        topic: 'Trigonometric Functions'
-      },
-      {
-        id: 'math-11-1-30',
-        question: 'If f(x) = e^x and g(x) = ln(x), what is (f∘g)(x) for x > 0?',
-        options: ['x', 'e^x', 'ln(x)', '1'],
-        correct: 'x',
-        explanation: '(f∘g)(x) = f(g(x)) = f(ln(x)) = e^(ln(x)) = x for x > 0.',
-        difficulty: 'hard',
-        topic: 'Exponential and Logarithmic Functions'
+        topic: 'Conditional Probability'
       }
     ]
   }
