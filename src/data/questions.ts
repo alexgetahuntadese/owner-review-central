@@ -1,6 +1,6 @@
 import { Question, Chapter } from './types';
 import { mathematicsChapters } from './subjects/mathematics';
-import { physicsChapters } from './subjects/physics';
+import { physicsChapters } from './subjects/physics/index';
 import { chemistryChapters } from './subjects/chemistry';
 import { biologyChapters } from './subjects/biology';
 import { englishChapters } from './subjects/english';
