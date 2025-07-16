@@ -21,7 +21,7 @@ const Grade12Subject = lazy(() => import("./pages/Grade12Subject"));
 const Grade12Quiz = lazy(() => import("./pages/Grade12Quiz"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-const queryClient = new QueryClient();
+// QueryClient will be initialized in the App component
 
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -169,6 +169,8 @@ const AppRoutes: React.FC = () => {
 };
 
 const App = () => {
+  const [queryClient] = useState(() => new QueryClient());
+  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
